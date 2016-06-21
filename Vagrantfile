@@ -20,6 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision :shell, path: "install-consul.sh"
     host.vm.provision :shell, path: "run-consul-server.sh", args: _CONSUL_ARGS
     host.vm.provision :shell, path: "set-dns.sh"
+    host.vm.provision :shell, path: "install-consul-template.sh"
   end
 
   config.vm.define :node01 do |host|
