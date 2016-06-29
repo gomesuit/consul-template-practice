@@ -1,7 +1,10 @@
 # consul-template-practice
 
+## serverで実行
 consul-template -consul 127.0.0.1:8500 -template "/root/hosts-node.ctmpl:/etc/hosts" -dry
 
+## node01で実行しserverの表示が変化することを確認
+consul leave
 
 
 # Running Registrator
